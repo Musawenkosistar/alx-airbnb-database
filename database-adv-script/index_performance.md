@@ -1,12 +1,15 @@
--- Indexes for Users table
-CREATE INDEX idx_users_email ON users(email);
-CREATE INDEX idx_users_username ON users(username);
+# Index Performance Analysis
 
--- Indexes for Bookings table
-CREATE INDEX idx_bookings_user_id ON bookings(user_id);
-CREATE INDEX idx_bookings_property_id ON bookings(property_id);
-CREATE INDEX idx_bookings_check_in ON bookings(check_in);
+## Objective
+Evaluate query performance before and after adding indexes to frequently accessed columns
+in the Users, Bookings, and Properties tables.
 
--- Indexes for Properties table
-CREATE INDEX idx_properties_location ON properties(location);
+---
 
+## Queries Analyzed
+
+### 1. Retrieve bookings by user
+```sql
+SELECT *
+FROM bookings
+WHERE user_id = 5;
