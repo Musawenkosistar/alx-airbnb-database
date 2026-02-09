@@ -33,3 +33,4 @@ FROM (
 ) AS booking_counts
 ORDER BY
     booking_rank;
+
