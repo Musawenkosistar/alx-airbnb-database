@@ -1,4 +1,4 @@
-# Airbnb Database Normalization
+Airbnb Database Normalization
 
 ## Step 1: First Normal Form (1NF)
 - All attributes have atomic values.
