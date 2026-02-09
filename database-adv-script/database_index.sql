@@ -9,3 +9,15 @@ CREATE INDEX idx_bookings_check_in ON bookings(check_in);
 
 -- Indexes for Properties table
 CREATE INDEX idx_properties_location ON properties(location);
+
+-- BEFORE indexing
+EXPLAIN
+SELECT *
+FROM bookings
+WHERE user_id = 5;
+
+-- AFTER indexing
+EXPLAIN
+SELECT *
+FROM bookings
+WHERE user_id = 5;
